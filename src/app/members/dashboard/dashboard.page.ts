@@ -37,7 +37,6 @@ export class DashboardPage implements OnInit {
   }
 
   doRefresh(event) {
-    console.log('inside doRefresh');
     this.getData();
 
 
@@ -56,7 +55,6 @@ export class DashboardPage implements OnInit {
   }
 
   async addTodo() {
-    console.log('call add todo page');
     const modal = await this.modalController.create({
       component: AddTodoPage,
       componentProps: {

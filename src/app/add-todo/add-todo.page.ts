@@ -28,7 +28,6 @@ export class AddTodoPage implements OnInit {
 
   saveItem() {
     this.todos.push(this.title);
-    console.log(this.title);
     this.dataService.save(this.todos);
 
     this.router.navigate(['members', 'dashboard']);
