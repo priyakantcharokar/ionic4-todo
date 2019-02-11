@@ -15,7 +15,7 @@ import { IonicStorageModule } from '@ionic/storage';
 import { AddTodoPageModule} from './add-todo/add-todo.module';
 import { Data } from './data.service';
 
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -29,7 +29,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     IonicStorageModule.forRoot(),
     ComponentsModule,
     AddTodoPageModule,
-    FormsModule,
     ReactiveFormsModule
   ],
     providers: [

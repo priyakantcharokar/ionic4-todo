@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>
+      Add Todo
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-input type="text" [(ngModel)]="title" placeholder="add new todo here"></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <!-- <button full ion-button color="secondary" (click)="saveItem()">Save</button> -->
+  <ion-button color="primary" (click)="saveItem()" expand="full">Add todo</ion-button>
+  <ion-button color="secondary" (click)="cancel()" expand="full">Cancel</ion-button>
+
+</ion-content>
