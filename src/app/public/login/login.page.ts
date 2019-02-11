@@ -27,10 +27,8 @@ export class LoginPage implements OnInit {
 
      onSubmit() {
       this.submitted = true;
-      console.log(this.username);
-      console.log(this.password);
 
-      this.authService.login();
+      this.authService.login(this.username, this.password);
 
       // stop here if form is invalid
       // by the lets comment it to proceed.

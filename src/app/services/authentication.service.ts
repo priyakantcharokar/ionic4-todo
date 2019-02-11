@@ -17,17 +17,21 @@ export class AuthenticationService {
     this.plt.ready().then(() => {
       this.checkToken();
     });
-   }
+  }
 
-   checkToken() {
+  checkToken() {
     this.storage.get(TOKEN_KEY).then(res => {
       if (res) {
         this.authenticationState.next(true);
       }
     });
-   }
+  }
 
-   login() {
+  login(username, password) {
+    if (username == null || password == null) {
+      this.authenticationState.next(false);
+      return;
+    }
     return this.storage.set(TOKEN_KEY, 'Bearer 1234567').then(() => {
       this.authenticationState.next(true);
     });
